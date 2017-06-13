@@ -16,7 +16,7 @@ RUN apk update \
 
  # Install OpenDMARC dependencies
  && apk add --no-cache \
-        # TODO
+        libmilter \
 
  # Install tools for building
  && apk add --no-cache --virtual .tool-deps \
@@ -24,7 +24,7 @@ RUN apk update \
 
  # Install OpenDMARC build dependencies
  && apk add --no-cache --virtual .build-deps \
-        # TODO
+        libmilter-dev \
 
  # Download and prepare OpenDMARC sources
  && curl -fL -o /tmp/opendmarc.tar.gz \
@@ -35,14 +35,28 @@ RUN apk update \
  && cd /tmp/opendmarc-* \
 
  # Build OpenDMARC from sources
- # TODO
+ && ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc/opendmarc \
+        # No documentation included to keep image size smaller
+        --docdir=/tmp/opendmarc/doc \
+        --infodir=/tmp/opendmarc/info \
+        --mandir=/tmp/opendmarc/man \
  && make \
 
  # Create OpenDMARC user and group
- # TODO
+ && addgroup -S -g 91 opendmarc \
+ && adduser -S -u 90 -D -s /sbin/nologin \
+            -H -h /run/opendmarc \
+            -G opendmarc -g opendmarc \
+            opendmarc \
+ && addgroup opendmarc mail \
 
  # Install OpenDMARC
  && make install \
+ # Prepare run directory
+ && install -d -o opendmarc -g opendmarc /run/opendmarc/ \
+ # Preserve licenses
  # TODO
 
  # Cleanup unnecessary stuff

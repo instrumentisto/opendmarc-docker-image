@@ -14,6 +14,7 @@
 
 IMAGE_NAME := instrumentisto/opendmarc
 ALL_IMAGES := \
+	debian:1.3.2,1.3,1,latest \
 	alpine:1.3.2-alpine,1.3-alpine,1-alpine,alpine
 #	<Dockerfile>:<version>,<tag1>,<tag2>,...
 
