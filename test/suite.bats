@@ -29,7 +29,7 @@
 
 @test "opendmarc: has correct version" {
   run docker run --rm --entrypoint sh $IMAGE -c \
-    "opendmarc -V | grep 'OpenDKIM Filter' \
+    "opendmarc -V | grep 'OpenDMARC Filter' \
                   | cut -d 'v' -f 2 \
                   | tr -d ' '"
   [ "$status" -eq 0 ]
