@@ -169,8 +169,7 @@ ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2 \
 
 COPY rootfs /
 
-RUN chmod +x /etc/services.d/*/run \
-             /etc/cont-init.d/*
+RUN chmod +x /etc/services.d/*/run
 
 
 EXPOSE 8893
