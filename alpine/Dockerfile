@@ -33,6 +33,10 @@ RUN apk update \
          | sha512sum -c -) \
  && tar -xzf /tmp/opendmarc.tar.gz -C /tmp/ \
  && cd /tmp/opendmarc-* \
+ # Patch NETDB_* musl libc problem.
+ # Details: https://github.com/instrumentisto/docker-mailserver/issues/4
+ && sed -i '1s;^;#if !defined(NETDB_INTERNAL)\n#  define NETDB_INTERNAL (-1)\n#endif\n#if !defined(NETDB_SUCCESS)\n#  define NETDB_SUCCESS (0)\n#endif\n\n;' \
+        libopendmarc/opendmarc_internal.h \
 
  # Build OpenDMARC from sources
  && ./configure \
