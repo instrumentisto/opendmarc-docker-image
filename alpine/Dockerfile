@@ -57,7 +57,11 @@ RUN apk update \
  # Prepare run directory
  && install -d -o opendmarc -g opendmarc /run/opendmarc/ \
  # Preserve licenses
- # TODO
+ && install -d /usr/share/licenses/opendmarc/ \
+ && mv /tmp/opendmarc/doc/LICENSE* \
+       /usr/share/licenses/opendmarc/ \
+ # Prepare configuration directories
+ && install -d /etc/opendmarc/conf.d/ \
 
  # Cleanup unnecessary stuff
  && apk del .tool-deps .build-deps \

@@ -109,7 +109,11 @@ RUN apt-get update \
  # Prepare run directory
  && install -d -o opendmarc -g opendmarc /run/opendmarc/ \
  # Preserve licenses
- # TODO
+ && install -d /usr/share/licenses/opendmarc/ \
+ && mv /tmp/opendmarc/doc/LICENSE* \
+       /usr/share/licenses/opendmarc/ \
+ # Prepare configuration directories
+ && install -d /etc/opendmarc/conf.d/ \
 
  # Cleanup unnecessary stuff
 <? if ($isAlpineImage) { ?>
@@ -139,7 +143,7 @@ RUN apt-get update \
 <? if ($isAlpineImage) { ?>
  && tar -xzf /tmp/s6-overlay.tar.gz -C / \
 <? } else { ?>
- # In Debian: /bin -> /usr/bin
+ # In Debian stretch: /bin -> /usr/bin
  # So unpacking s6-overlay.tar.gz to the / will replace /bin symlink with
  # /bin directory from archive.
  # To avoid this we need to copy content of /bin manually.
