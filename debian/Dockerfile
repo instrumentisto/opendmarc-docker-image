@@ -14,25 +14,25 @@ RUN apt-get update \
             inetutils-syslogd \
             ca-certificates \
  && update-ca-certificates \
-
+    \
  # Install OpenDMARC dependencies
  && apt-get install -y --no-install-recommends --no-install-suggests \
             libmilter1.0.1 \
-
+    \
  # Install tools for building
  && toolDeps=" \
         curl make gcc g++ libc-dev \
     " \
  && apt-get install -y --no-install-recommends --no-install-suggests \
             $toolDeps \
-
+    \
  # Install OpenDMARC build dependencies
  && buildDeps=" \
         libmilter-dev \
     " \
  && apt-get install -y --no-install-recommends --no-install-suggests \
             $buildDeps \
-
+    \
  # Download and prepare OpenDMARC sources
  && curl -fL -o /tmp/opendmarc.tar.gz \
          https://downloads.sourceforge.net/project/opendmarc/opendmarc-1.3.2.tar.gz \
@@ -40,7 +40,7 @@ RUN apt-get update \
          | sha512sum -c -) \
  && tar -xzf /tmp/opendmarc.tar.gz -C /tmp/ \
  && cd /tmp/opendmarc-* \
-
+    \
  # Build OpenDMARC from sources
  && ./configure \
         --prefix=/usr \
@@ -50,7 +50,7 @@ RUN apt-get update \
         --infodir=/tmp/opendmarc/info \
         --mandir=/tmp/opendmarc/man \
  && make \
-
+    \
  # Create OpenDMARC user and group
  && addgroup --system --gid 91 opendmarc \
  && adduser --system --uid 90 --disabled-password --shell /sbin/nologin \
@@ -58,7 +58,7 @@ RUN apt-get update \
             --ingroup opendmarc --gecos opendmarc \
             opendmarc \
  && adduser opendmarc mail \
-
+    \
  # Install OpenDMARC
  && make install \
  # Prepare run directory
@@ -69,7 +69,7 @@ RUN apt-get update \
        /usr/share/licenses/opendmarc/ \
  # Prepare configuration directories
  && install -d /etc/opendmarc/conf.d/ \
-
+    \
  # Cleanup unnecessary stuff
  && apt-get purge -y --auto-remove \
                   -o APT::AutoRemove::RecommendsImportant=false \
@@ -95,7 +95,7 @@ RUN apt-get update \
  && rm -rf /tmp/s6-overlay/bin \
            /tmp/s6-overlay/usr/bin/execlineb \
  && cp -rf /tmp/s6-overlay/* / \
-
+    \
  # Cleanup unnecessary stuff
  && apt-get purge -y --auto-remove \
                   -o APT::AutoRemove::RecommendsImportant=false \

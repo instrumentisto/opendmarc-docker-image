@@ -35,7 +35,7 @@ RUN apt-get update \
             ca-certificates \
 <? } ?>
  && update-ca-certificates \
-
+    \
  # Install OpenDMARC dependencies
 <? if ($isAlpineImage) { ?>
  && apk add --no-cache \
@@ -44,7 +44,7 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends --no-install-suggests \
             libmilter1.0.1 \
 <? } ?>
-
+    \
  # Install tools for building
 <? if ($isAlpineImage) { ?>
  && apk add --no-cache --virtual .tool-deps \
@@ -56,7 +56,7 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends --no-install-suggests \
             $toolDeps \
 <? } ?>
-
+    \
  # Install OpenDMARC build dependencies
 <? if ($isAlpineImage) { ?>
  && apk add --no-cache --virtual .build-deps \
@@ -68,7 +68,7 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends --no-install-suggests \
             $buildDeps \
 <? } ?>
-
+    \
  # Download and prepare OpenDMARC sources
  && curl -fL -o /tmp/opendmarc.tar.gz \
          https://downloads.sourceforge.net/project/opendmarc/opendmarc-<?= $OpenDMARCVer; ?>.tar.gz \
@@ -82,7 +82,7 @@ RUN apt-get update \
  && sed -i '1s;^;#if !defined(NETDB_INTERNAL)\n#  define NETDB_INTERNAL (-1)\n#endif\n#if !defined(NETDB_SUCCESS)\n#  define NETDB_SUCCESS (0)\n#endif\n\n;' \
         libopendmarc/opendmarc_internal.h \
 <? } ?>
-
+    \
  # Build OpenDMARC from sources
  && ./configure \
         --prefix=/usr \
@@ -92,7 +92,7 @@ RUN apt-get update \
         --infodir=/tmp/opendmarc/info \
         --mandir=/tmp/opendmarc/man \
  && make \
-
+    \
  # Create OpenDMARC user and group
 <? if ($isAlpineImage) { ?>
  && addgroup -S -g 91 opendmarc \
@@ -109,7 +109,7 @@ RUN apt-get update \
             opendmarc \
  && adduser opendmarc mail \
 <? } ?>
-
+    \
  # Install OpenDMARC
  && make install \
  # Prepare run directory
@@ -120,7 +120,7 @@ RUN apt-get update \
        /usr/share/licenses/opendmarc/ \
  # Prepare configuration directories
  && install -d /etc/opendmarc/conf.d/ \
-
+    \
  # Cleanup unnecessary stuff
 <? if ($isAlpineImage) { ?>
  && apk del .tool-deps .build-deps \
@@ -160,7 +160,7 @@ RUN apt-get update \
            /tmp/s6-overlay/usr/bin/execlineb \
  && cp -rf /tmp/s6-overlay/* / \
 <? } ?>
-
+    \
  # Cleanup unnecessary stuff
 <? if ($isAlpineImage) { ?>
  && apk del .tool-deps \

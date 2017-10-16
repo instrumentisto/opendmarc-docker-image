@@ -13,19 +13,19 @@ RUN apk update \
  && apk add --no-cache \
         ca-certificates \
  && update-ca-certificates \
-
+    \
  # Install OpenDMARC dependencies
  && apk add --no-cache \
         libmilter \
-
+    \
  # Install tools for building
  && apk add --no-cache --virtual .tool-deps \
         curl coreutils autoconf g++ libtool make \
-
+    \
  # Install OpenDMARC build dependencies
  && apk add --no-cache --virtual .build-deps \
         libmilter-dev \
-
+    \
  # Download and prepare OpenDMARC sources
  && curl -fL -o /tmp/opendmarc.tar.gz \
          https://downloads.sourceforge.net/project/opendmarc/opendmarc-1.3.2.tar.gz \
@@ -37,7 +37,7 @@ RUN apk update \
  # Details: https://github.com/instrumentisto/docker-mailserver/issues/4
  && sed -i '1s;^;#if !defined(NETDB_INTERNAL)\n#  define NETDB_INTERNAL (-1)\n#endif\n#if !defined(NETDB_SUCCESS)\n#  define NETDB_SUCCESS (0)\n#endif\n\n;' \
         libopendmarc/opendmarc_internal.h \
-
+    \
  # Build OpenDMARC from sources
  && ./configure \
         --prefix=/usr \
@@ -47,7 +47,7 @@ RUN apk update \
         --infodir=/tmp/opendmarc/info \
         --mandir=/tmp/opendmarc/man \
  && make \
-
+    \
  # Create OpenDMARC user and group
  && addgroup -S -g 91 opendmarc \
  && adduser -S -u 90 -D -s /sbin/nologin \
@@ -55,7 +55,7 @@ RUN apk update \
             -G opendmarc -g opendmarc \
             opendmarc \
  && addgroup opendmarc mail \
-
+    \
  # Install OpenDMARC
  && make install \
  # Prepare run directory
@@ -66,7 +66,7 @@ RUN apk update \
        /usr/share/licenses/opendmarc/ \
  # Prepare configuration directories
  && install -d /etc/opendmarc/conf.d/ \
-
+    \
  # Cleanup unnecessary stuff
  && apk del .tool-deps .build-deps \
  && rm -rf /var/cache/apk/* \
@@ -79,7 +79,7 @@ RUN apk add --update --no-cache --virtual .tool-deps \
  && curl -fL -o /tmp/s6-overlay.tar.gz \
          https://github.com/just-containers/s6-overlay/releases/download/v1.20.0.0/s6-overlay-amd64.tar.gz \
  && tar -xzf /tmp/s6-overlay.tar.gz -C / \
-
+    \
  # Cleanup unnecessary stuff
  && apk del .tool-deps \
  && rm -rf /var/cache/apk/* \
