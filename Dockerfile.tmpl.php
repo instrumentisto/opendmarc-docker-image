@@ -12,7 +12,7 @@ $S6OverlayVer = '1.21.2.2';
 
 <? if ($isAlpineImage) { ?>
 # https://hub.docker.com/_/alpine
-FROM alpine:3.7
+FROM alpine:3.8
 <? } else { ?>
 # https://hub.docker.com/_/debian
 FROM debian:stretch-slim
