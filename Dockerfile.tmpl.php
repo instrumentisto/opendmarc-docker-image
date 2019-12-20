@@ -18,8 +18,6 @@ FROM alpine:3.10
 FROM debian:stretch-slim
 <? } ?>
 
-MAINTAINER Instrumentisto Team <developer@instrumentisto.com>
-
 
 # Build and install OpenDMARC
 <? if ($isAlpineImage) { ?>

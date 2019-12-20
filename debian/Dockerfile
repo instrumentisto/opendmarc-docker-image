@@ -4,8 +4,6 @@
 # https://hub.docker.com/_/debian
 FROM debian:stretch-slim
 
-MAINTAINER Instrumentisto Team <developer@instrumentisto.com>
-
 
 # Build and install OpenDMARC
 RUN apt-get update \

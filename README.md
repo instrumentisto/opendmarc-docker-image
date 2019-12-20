@@ -121,9 +121,13 @@ This image contains [`s6-overlay`][21] inside. So you may use all the [features 
 
 ## License
 
-OpenDMARC itself is licensed under [BSD license][91].
+OpenDMARC is licensed under [BSD license][92].
 
-OpenDMARC Docker image is licensed under [MIT license][92].
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.
+
+The [sources][90] for producing `instrumentisto/opendmarc` Docker images are licensed under [Blue Oak Model License 1.0.0][91].
 
 
 
@@ -149,7 +153,8 @@ If you have any problems with or questions about this image, please contact us t
 [20]: http://skarnet.org/software/s6/overview.html
 [21]: https://github.com/just-containers/s6-overlay
 [22]: https://github.com/just-containers/s6-overlay#usage
-[91]: https://sourceforge.net/p/opendmarc/code/ci/master/tree/LICENSE
-[92]: https://github.com/instrumentisto/opendmarc-docker-image/blob/master/LICENSE.md
+[90]: https://github.com/instrumentisto/opendmarc-docker-image
+[91]: https://github.com/instrumentisto/opendmarc-docker-image/blob/master/LICENSE.md
+[92]: https://sourceforge.net/p/opendmarc/code/ci/master/tree/LICENSE
 [101]: https://github.com/instrumentisto/opendmarc-docker-image/blob/master/debian/Dockerfile
 [102]: https://github.com/instrumentisto/opendmarc-docker-image/blob/master/alpine/Dockerfile
