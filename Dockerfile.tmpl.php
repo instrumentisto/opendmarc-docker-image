@@ -15,7 +15,7 @@ FROM debian:stretch-slim
 
 ARG opendmarc_ver=<?= explode('-', $var['version'])[0]."\n"; ?>
 ARG opendmarc_sum=<?= "6045fb7d2be8f0ffdeca07324857d92908a41c6792749017c2fcc1058f05f55317b1919c67c780827dd7094ec8fff2e1fa4aeb5bab7ff7461537957af2652748\n"; ?>
-ARG s6_overlay_ver=2.0.0.1
+ARG s6_overlay_ver=2.2.0.3
 
 LABEL org.opencontainers.image.source="\
     https://github.com/instrumentisto/opendmarc-docker-image"
