@@ -4,6 +4,13 @@
 # https://hub.docker.com/_/debian
 FROM debian:stretch-slim
 
+ARG opendmarc_ver=1.3.2
+ARG opendmarc_sum=6045fb7d2be8f0ffdeca07324857d92908a41c6792749017c2fcc1058f05f55317b1919c67c780827dd7094ec8fff2e1fa4aeb5bab7ff7461537957af2652748
+ARG s6_overlay_ver=2.0.0.1
+
+LABEL org.opencontainers.image.source="\
+    https://github.com/instrumentisto/opendmarc-docker-image"
+
 
 # Build and install OpenDMARC
 RUN apt-get update \
@@ -33,8 +40,8 @@ RUN apt-get update \
     \
  # Download and prepare OpenDMARC sources
  && curl -fL -o /tmp/opendmarc.tar.gz \
-         https://downloads.sourceforge.net/project/opendmarc/opendmarc-1.3.2.tar.gz \
- && (echo "6045fb7d2be8f0ffdeca07324857d92908a41c6792749017c2fcc1058f05f55317b1919c67c780827dd7094ec8fff2e1fa4aeb5bab7ff7461537957af2652748  /tmp/opendmarc.tar.gz" \
+         https://downloads.sourceforge.net/project/opendmarc/opendmarc-${opendmarc_ver}.tar.gz \
+ && (echo "${opendmarc_sum}  /tmp/opendmarc.tar.gz" \
          | sha512sum -c -) \
  && tar -xzf /tmp/opendmarc.tar.gz -C /tmp/ \
  && cd /tmp/opendmarc-* \
@@ -82,7 +89,7 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends --no-install-suggests \
             curl \
  && curl -fL -o /tmp/s6-overlay.tar.gz \
-         https://github.com/just-containers/s6-overlay/releases/download/v2.0.0.1/s6-overlay-amd64.tar.gz \
+         https://github.com/just-containers/s6-overlay/releases/download/v${s6_overlay_ver}/s6-overlay-amd64.tar.gz \
  # In Debian stretch: /bin -> /usr/bin
  # So unpacking s6-overlay.tar.gz to the / will replace /bin symlink with
  # /bin directory from archive.
