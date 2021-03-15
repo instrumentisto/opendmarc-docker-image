@@ -10,7 +10,7 @@ $isAlpineImage = $var['dockerfile'] === 'alpine';
 FROM alpine:3.13
 <? } else { ?>
 # https://hub.docker.com/_/debian
-FROM debian:stretch-slim
+FROM debian:buster-slim
 <? } ?>
 
 ARG opendmarc_ver=<?= explode('-', $var['version'])[0]."\n"; ?>

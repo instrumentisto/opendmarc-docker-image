@@ -6,6 +6,20 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
+## [1.3.2-r1] · 2021-03-15
+[1.3.2-r1]: /../../tree/1.3.2-r1
+
+[Diff](/../../compare/1.3.2-r0...1.3.2-r1)
+
+### Upgraded
+
+- [s6-overlay] 2.2.0.3: <https://github.com/just-containers/s6-overlay/releases/tag/v2.2.0.3>
+- [Alpine Linux] 3.13: <https://alpinelinux.org/posts/Alpine-3.13.0-released.html>
+- [Debian] "buster": <https://www.debian.org/releases/buster>
+
+
+
+
 ## [1.3.2-r0] · 2021-03-12
 [1.3.2-r0]: /../../tree/1.3.2-r0
 
