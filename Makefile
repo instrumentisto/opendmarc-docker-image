@@ -22,8 +22,8 @@ NAMESPACES := instrumentisto \
               quay.io/instrumentisto
 NAME := opendmarc
 ALL_IMAGES := \
-	debian:1.3.2-r3,1.3.2,1.3,1,latest \
-	alpine:1.3.2-r3-alpine,1.3.2-alpine,1.3-alpine,1-alpine,alpine
+	debian:1.3.2-r4,1.3.2,1.3,1,latest \
+	alpine:1.3.2-r4-alpine,1.3.2-alpine,1.3-alpine,1-alpine,alpine
 #	<Dockerfile>:<version>,<tag1>,<tag2>,...
 
 # Default is first image from ALL_IMAGES list.
