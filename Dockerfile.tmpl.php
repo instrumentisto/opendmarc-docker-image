@@ -7,14 +7,12 @@ $isAlpineImage = $var['dockerfile'] === 'alpine';
 
 <? if ($isAlpineImage) { ?>
 # https://hub.docker.com/_/alpine
-FROM alpine:3.13.5
+FROM alpine:3.13
 <? } else { ?>
 # https://hub.docker.com/_/debian
 FROM debian:buster-slim
 <? } ?>
 
-ARG opendmarc_ver=<?= explode('-', $var['version'])[0]."\n"; ?>
-ARG opendmarc_sum=<?= "6045fb7d2be8f0ffdeca07324857d92908a41c6792749017c2fcc1058f05f55317b1919c67c780827dd7094ec8fff2e1fa4aeb5bab7ff7461537957af2652748\n"; ?>
 ARG s6_overlay_ver=2.2.0.3
 
 LABEL org.opencontainers.image.source="\
@@ -48,10 +46,10 @@ RUN apt-get update \
  # Install tools for building
 <? if ($isAlpineImage) { ?>
  && apk add --no-cache --virtual .tool-deps \
-        curl coreutils autoconf g++ libtool make \
+        autoconf automake coreutils curl g++ libtool make \
 <? } else { ?>
  && toolDeps=" \
-        curl make gcc g++ libc-dev \
+        autoconf automake curl gcc g++ libc-dev libtool make \
     " \
  && apt-get install -y --no-install-recommends --no-install-suggests \
             $toolDeps \
@@ -71,11 +69,9 @@ RUN apt-get update \
     \
  # Download and prepare OpenDMARC sources
  && curl -fL -o /tmp/opendmarc.tar.gz \
-         https://downloads.sourceforge.net/project/opendmarc/opendmarc-${opendmarc_ver}.tar.gz \
- && (echo "${opendmarc_sum}  /tmp/opendmarc.tar.gz" \
-         | sha512sum -c -) \
+         https://github.com/trusteddomainproject/OpenDMARC/archive/refs/tags/rel-opendmarc-1-4-1-1.tar.gz \
  && tar -xzf /tmp/opendmarc.tar.gz -C /tmp/ \
- && cd /tmp/opendmarc-* \
+ && cd /tmp/OpenDMARC-* \
 <? if ($isAlpineImage) { ?>
  # Patch NETDB_* musl libc problem.
  # Details: https://github.com/instrumentisto/docker-mailserver/issues/4
@@ -84,6 +80,7 @@ RUN apt-get update \
 <? } ?>
     \
  # Build OpenDMARC from sources
+ && autoreconf -v -i \
  && ./configure \
         --prefix=/usr \
         --sysconfdir=/etc/opendmarc \

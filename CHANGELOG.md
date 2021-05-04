@@ -6,6 +6,19 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
+## [1.4.1.1-r0] · 2021-05-04
+[1.4.1.1-r0]: /../../tree/1.4.1.1-r0
+
+[Diff](/../../compare/1.3.2-r4...1.4.1.1-r0)
+
+### Upgraded
+
+- [OpenDMARC] 1.4.1: <https://github.com/trusteddomainproject/OpenDMARC/releases/tag/rel-opendmarc-1-4-1>
+- [OpenDMARC] 1.4.1.1: <https://github.com/trusteddomainproject/OpenDMARC/releases/tag/rel-opendmarc-1-4-1-1>
+
+
+
+
 ## [1.3.2-r4] · 2021-04-15
 [1.3.2-r4]: /../../tree/1.3.2-r4
 
@@ -74,6 +87,6 @@ All user visible changes to this project will be documented in this file. This p
 
 [Alpine Linux]: https://www.alpinelinux.org
 [Debian]: https://www.debian.org
-[OpenDMARC]: http://www.trusteddomain.org/opendmarc
+[OpenDMARC]: https://github.com/trusteddomainproject/OpenDMARC
 [s6-overlay]: https://github.com/just-containers/s6-overlay
 [Semantic Versioning 2.0.0]: https://semver.org
