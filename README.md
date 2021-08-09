@@ -17,8 +17,8 @@ OpenDMARC Docker image
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.4.1.1-r1`, `1.4.1.1`, `1.4`, `1`, `latest`][101]
-- [`1.4.1.1-r1-alpine`, `1.4.1.1-alpine`, `1.4-alpine`, `1-alpine`, `alpine`][102]
+- [`1.4.1.1-r2`, `1.4.1.1`, `1.4`, `1`, `latest`][101]
+- [`1.4.1.1-r2-alpine`, `1.4.1.1-alpine`, `1.4-alpine`, `1-alpine`, `alpine`][102]
 
 
 
