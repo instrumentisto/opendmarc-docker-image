@@ -35,7 +35,7 @@
     -v $(pwd)/tests/resources/conf.d:/etc/opendmarc/conf.d:ro \
       $IMAGE
   [ "$status" -eq 0 ]
-  run sleep 5
+  run sleep 10
 
   run docker run --rm -i --link test-opendmarc:opendmarc \
     --entrypoint sh instrumentisto/nmap -c \
@@ -49,6 +49,6 @@
   run docker run --rm \
     -v $(pwd)/tests/resources/conf.d:/etc/opendmarc/conf.d:ro \
       $IMAGE sh -c \
-        'opendmarc && sleep 5 && ls /run/opendmarc/another-one.pid'
+        'opendmarc && sleep 10 && ls /run/opendmarc/another-one.pid'
   [ "$status" -eq 0 ]
 }

@@ -6,6 +6,18 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
+## [1.4.1.1-r3] · 2021-08-20
+[1.4.1.1-r3]: /../../tree/1.4.1.1-r3
+
+[Diff](/../../compare/1.4.1.1-r2...1.4.1.1-r3)
+
+### Upgraded
+
+- [Debian] "bullseye": <https://www.debian.org/releases/bullseye>
+
+
+
+
 ## [1.4.1.1-r2] · 2021-08-09
 [1.4.1.1-r2]: /../../tree/1.4.1.1-r2
 

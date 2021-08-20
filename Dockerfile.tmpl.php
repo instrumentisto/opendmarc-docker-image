@@ -10,7 +10,7 @@ $isAlpineImage = $var['dockerfile'] === 'alpine';
 FROM alpine:3.14.1
 <? } else { ?>
 # https://hub.docker.com/_/debian
-FROM debian:buster-slim
+FROM debian:bullseye-slim
 <? } ?>
 
 ARG s6_overlay_ver=2.2.0.3
