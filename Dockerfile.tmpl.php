@@ -7,7 +7,7 @@ $isAlpineImage = $var['dockerfile'] === 'alpine';
 
 <? if ($isAlpineImage) { ?>
 # https://hub.docker.com/_/alpine
-FROM alpine:3.14.3
+FROM alpine:3.15
 <? } else { ?>
 # https://hub.docker.com/_/debian
 FROM debian:bullseye-slim

@@ -6,6 +6,18 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
+## [1.4.1.1-r6] · 2021-11-25
+[1.4.1.1-r6]: /../../tree/1.4.1.1-r6
+
+[Diff](/../../compare/1.4.1.1-r5...1.4.1.1-r6)
+
+### Upgraded
+
+- [Alpine Linux] 3.15: <https://alpinelinux.org/posts/Alpine-3.15.0-released.html>
+
+
+
+
 ## [1.4.1.1-r5] · 2021-11-15
 [1.4.1.1-r5]: /../../tree/1.4.1.1-r5
 
