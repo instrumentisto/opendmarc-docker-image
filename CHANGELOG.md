@@ -6,6 +6,18 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
+## [1.4.2-r0] · 2021-12-24
+[1.4.2-r0]: /../../tree/1.4.2-r0
+
+[Diff](/../../compare/1.4.1.1-r6...1.4.2-r0)
+
+### Upgraded
+
+- [OpenDMARC] 1.4.2: <https://github.com/trusteddomainproject/OpenDMARC/releases/tag/rel-opendmarc-1-4-2>
+
+
+
+
 ## [1.4.1.1-r6] · 2021-11-25
 [1.4.1.1-r6]: /../../tree/1.4.1.1-r6
 

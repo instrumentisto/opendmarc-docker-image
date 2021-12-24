@@ -69,7 +69,7 @@ RUN apt-get update \
     \
  # Download and prepare OpenDMARC sources
  && curl -fL -o /tmp/opendmarc.tar.gz \
-         https://github.com/trusteddomainproject/OpenDMARC/archive/refs/tags/rel-opendmarc-1-4-1-1.tar.gz \
+         https://github.com/trusteddomainproject/OpenDMARC/archive/refs/tags/rel-opendmarc-1-4-2.tar.gz \
  && tar -xzf /tmp/opendmarc.tar.gz -C /tmp/ \
  && cd /tmp/OpenDMARC-* \
 <? if ($isAlpineImage) { ?>
