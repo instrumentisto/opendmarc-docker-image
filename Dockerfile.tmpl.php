@@ -13,7 +13,7 @@ FROM alpine:3.15
 FROM debian:bullseye-slim
 <? } ?>
 
-ARG s6_overlay_ver=2.2.0.3
+ARG s6_overlay_ver=3.1.0.1
 
 LABEL org.opencontainers.image.source="\
     https://github.com/instrumentisto/opendmarc-docker-image"
@@ -139,24 +139,14 @@ RUN apk add --update --no-cache --virtual .tool-deps \
 <? } else { ?>
 RUN apt-get update \
  && apt-get install -y --no-install-recommends --no-install-suggests \
-            curl \
+            curl xz-utils \
 <? } ?>
- && curl -fL -o /tmp/s6-overlay.tar.gz \
-         https://github.com/just-containers/s6-overlay/releases/download/v${s6_overlay_ver}/s6-overlay-amd64.tar.gz \
-<? if ($isAlpineImage) { ?>
- && tar -xzf /tmp/s6-overlay.tar.gz -C / \
-<? } else { ?>
- # In Debian stretch: /bin -> /usr/bin
- # So unpacking s6-overlay.tar.gz to the / will replace /bin symlink with
- # /bin directory from archive.
- # To avoid this we need to copy content of /bin manually.
- && mkdir -p /tmp/s6-overlay \
- && tar -xzf /tmp/s6-overlay.tar.gz -C /tmp/s6-overlay/ \
- && cp -rf /tmp/s6-overlay/bin/* /bin/ \
- && rm -rf /tmp/s6-overlay/bin \
-           /tmp/s6-overlay/usr/bin/execlineb \
- && cp -rf /tmp/s6-overlay/* / \
-<? } ?>
+ && curl -fL -o /tmp/s6-overlay-noarch.tar.xz \
+         https://github.com/just-containers/s6-overlay/releases/download/v${s6_overlay_ver}/s6-overlay-noarch.tar.xz \
+ && curl -fL -o /tmp/s6-overlay-bin.tar.xz \
+         https://github.com/just-containers/s6-overlay/releases/download/v${s6_overlay_ver}/s6-overlay-x86_64.tar.xz \
+ && tar -xf /tmp/s6-overlay-noarch.tar.xz -C / \
+ && tar -xf /tmp/s6-overlay-bin.tar.xz -C / \
     \
  # Cleanup unnecessary stuff
 <? if ($isAlpineImage) { ?>
@@ -165,18 +155,20 @@ RUN apt-get update \
 <? } else { ?>
  && apt-get purge -y --auto-remove \
                   -o APT::AutoRemove::RecommendsImportant=false \
-            curl \
+            curl xz-utils \
  && rm -rf /var/lib/apt/lists/* \
 <? } ?>
            /tmp/*
 
-ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2 \
+ENV S6_KEEP_ENV=1 \
+    S6_BEHAVIOUR_IF_STAGE2_FAILS=2 \
     S6_CMD_WAIT_FOR_SERVICES=1
 
 
 COPY rootfs /
 
-RUN chmod +x /etc/services.d/*/run
+RUN chmod +x /etc/s6-overlay/s6-rc.d/*/run \
+             /etc/s6-overlay/s6-rc.d/*/*.sh
 
 
 EXPOSE 8893
