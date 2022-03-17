@@ -6,6 +6,19 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
+## [1.4.2-r2] · 2022-03-17
+[1.4.2-r2]: /../../tree/1.4.2-r2
+
+[Diff](/../../compare/1.4.2-r1...1.4.2-r2)
+
+### Security updated
+
+- [Alpine Linux] 3.15.1: <https://github.com/docker-library/official-images/commit/a17a3d23dd04c3de3c43bcc27885638b8f389390>
+- [Debian] "bullseye" 20220316: <https://github.com/docker-library/official-images/commit/1e1bb99db26edc6b8605d83eefc22e1288203a20>
+
+
+
+
 ## [1.4.2-r1] · 2022-03-09
 [1.4.2-r1]: /../../tree/1.4.2-r1
 
