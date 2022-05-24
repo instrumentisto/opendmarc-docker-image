@@ -6,6 +6,22 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
+## [1.4.2-r6] · 2022-05-24
+[1.4.2-r6]: /../../tree/1.4.2-r6
+
+[Diff](/../../compare/1.4.2-r5...1.4.2-r6)
+
+### Upgraded
+
+- [Alpine Linux] 3.16: <https://alpinelinux.org/posts/Alpine-3.16.0-released.html>
+
+### Security updated
+
+- [Debian] "bullseye" 20220509: <https://github.com/docker-library/official-images/commit/5e2abb3fc26aa1e16e7e3516580621bef93a64e2>
+
+
+
+
 ## [1.4.2-r5] · 2022-04-06
 [1.4.2-r5]: /../../tree/1.4.2-r5
 
