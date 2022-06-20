@@ -6,9 +6,6 @@ FROM alpine:3.16
 
 ARG s6_overlay_ver=3.1.0.1
 
-LABEL org.opencontainers.image.source="\
-    https://github.com/instrumentisto/opendmarc-docker-image"
-
 
 # Build and install OpenDMARC
 RUN apk update \
