@@ -23,8 +23,8 @@ NAMESPACES := $(OWNER) \
               ghcr.io/$(OWNER) \
               quay.io/$(OWNER)
 ALL_IMAGES := \
-	debian:1.4.2-r7,1.4.2,1.4,1,latest \
-	alpine:1.4.2-r7-alpine,1.4.2-alpine,1.4-alpine,1-alpine,alpine
+	debian:1.4.2-r8,1.4.2,1.4,1,latest \
+	alpine:1.4.2-r8-alpine,1.4.2-alpine,1.4-alpine,1-alpine,alpine
 #	<Dockerfile>:<version>,<tag1>,<tag2>,...
 
 # Default is first image from ALL_IMAGES list.
