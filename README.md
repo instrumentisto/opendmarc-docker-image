@@ -2,7 +2,7 @@ OpenDMARC Docker image
 ======================
 
 [![Release](https://img.shields.io/github/v/release/instrumentisto/opendmarc-docker-image "Release")](https://github.com/instrumentisto/opendmarc-docker-image/releases)
-[![CI](https://github.com/instrumentisto/opendmarc-docker-image/workflows/CI/badge.svg?branch=master "CI")](https://github.com/instrumentisto/opendmarc-docker-image/actions?query=workflow%3ACI+branch%3Amaster)
+[![CI](https://github.com/instrumentisto/opendmarc-docker-image/workflows/CI/badge.svg?branch=main "CI")](https://github.com/instrumentisto/opendmarc-docker-image/actions?query=workflow%3ACI+branch%3Amain)
 [![Docker Hub](https://img.shields.io/docker/pulls/instrumentisto/opendmarc?label=Docker%20Hub%20pulls "Docker Hub pulls")](https://hub.docker.com/r/instrumentisto/opendmarc)
 [![Uses](https://img.shields.io/badge/uses-s6--overlay-blue.svg "Uses s6-overlay")](https://github.com/just-containers/s6-overlay)
 
@@ -10,7 +10,7 @@ OpenDMARC Docker image
 | [GitHub Container Registry](https://github.com/orgs/instrumentisto/packages/container/package/opendmarc)
 | [Quay.io](https://quay.io/repository/instrumentisto/opendmarc)
 
-[Changelog](https://github.com/instrumentisto/opendmarc-docker-image/blob/master/CHANGELOG.md)
+[Changelog](https://github.com/instrumentisto/opendmarc-docker-image/blob/main/CHANGELOG.md)
 
 
 
@@ -169,7 +169,7 @@ If you have any problems with or questions about this image, please contact us t
 [21]: https://github.com/just-containers/s6-overlay
 [22]: https://github.com/just-containers/s6-overlay#usage
 [90]: https://github.com/instrumentisto/opendmarc-docker-image
-[91]: https://github.com/instrumentisto/opendmarc-docker-image/blob/master/LICENSE.md
+[91]: https://github.com/instrumentisto/opendmarc-docker-image/blob/main/LICENSE.md
 [92]: https://sourceforge.net/p/opendmarc/code/ci/master/tree/LICENSE
-[101]: https://github.com/instrumentisto/opendmarc-docker-image/blob/master/debian/Dockerfile
-[102]: https://github.com/instrumentisto/opendmarc-docker-image/blob/master/alpine/Dockerfile
+[101]: https://github.com/instrumentisto/opendmarc-docker-image/blob/main/debian/Dockerfile
+[102]: https://github.com/instrumentisto/opendmarc-docker-image/blob/main/alpine/Dockerfile
