@@ -6,6 +6,20 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
+## [1.4.2-r14] · 2022-10-04
+[1.4.2-r14]: /../../tree/1.4.2-r14
+
+[Diff](/../../compare/1.4.2-r13...1.4.2-r14)
+
+### Fixed
+
+- `syslogd` not running in [Debian]. ([instrumentisto/opendkim-docker-image#6])
+
+[instrumentisto/opendkim-docker-image#6]: https://github.com/instrumentisto/opendkim-docker-image/issues/6
+
+
+
+
 ## [1.4.2-r13] · 2022-08-30
 [1.4.2-r13]: /../../tree/1.4.2-r13
 
