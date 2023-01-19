@@ -6,7 +6,23 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
-## [1.4.2-r16] · 2022-11-23
+## [1.4.2-r17] · 2023-01-19
+[1.4.2-r17]: /../../tree/1.4.2-r17
+
+[Diff](/../../compare/1.4.2-r16...1.4.2-r17)
+
+### Upgraded
+
+- [s6-overlay] 3.1.3.0: <https://github.com/just-containers/s6-overlay/releases/tag/v3.1.3.0>
+
+### Security updated
+
+- [Debian] "bullseye" 20230109: <https://github.com/docker-library/official-images/commit/5e4784af91b60ebae23aab567b6cea3dcdb173a0>
+
+
+
+
+## [1.4.2-r16] · 2023-01-10
 [1.4.2-r16]: /../../tree/1.4.2-r16
 
 [Diff](/../../compare/1.4.2-r15...1.4.2-r16)

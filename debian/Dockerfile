@@ -4,7 +4,7 @@
 # https://hub.docker.com/_/debian
 FROM debian:bullseye-slim
 
-ARG s6_overlay_ver=3.1.2.1
+ARG s6_overlay_ver=3.1.3.0
 
 
 # Build and install OpenDMARC
