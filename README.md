@@ -17,8 +17,8 @@ OpenDMARC Docker image
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.4.2-r17`, `1.4.2`, `1.4`, `1`, `latest`][101]
-- [`1.4.2-r17-alpine`, `1.4.2-alpine`, `1.4-alpine`, `1-alpine`, `alpine`][102]
+- [`1.4.2-r18`, `1.4.2`, `1.4`, `1`, `latest`][101]
+- [`1.4.2-r18-alpine`, `1.4.2-alpine`, `1.4-alpine`, `1-alpine`, `alpine`][102]
 
 
 
@@ -99,7 +99,7 @@ This image contains [`s6-overlay`][21] inside. So you may use all the [features 
 
 
 
-## Image versions
+## Image tags
 
 
 ### `<X>`
