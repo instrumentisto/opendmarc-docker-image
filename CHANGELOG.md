@@ -51,7 +51,7 @@ All user visible changes to this project will be documented in this file. This p
 ### Security updated
 
 - [Alpine Linux] 3.17.2: <https://github.com/docker-library/official-images/commit/5819aa56167e9874ef65e35da8277dc71b3ecee6>
-- [Debian] "bullseye" 20230208: <https://github.com/docker-library/official-images/commit/0a379d1f4d38dee47df84b07afcf5c26d03cc5a5>
+- [Debian Linux] "bullseye" 20230208: <https://github.com/docker-library/official-images/commit/0a379d1f4d38dee47df84b07afcf5c26d03cc5a5>
 
 
 
@@ -67,7 +67,7 @@ All user visible changes to this project will be documented in this file. This p
 
 ### Security updated
 
-- [Debian] "bullseye" 20230109: <https://github.com/docker-library/official-images/commit/5e4784af91b60ebae23aab567b6cea3dcdb173a0>
+- [Debian Linux] "bullseye" 20230109: <https://github.com/docker-library/official-images/commit/5e4784af91b60ebae23aab567b6cea3dcdb173a0>
 
 
 
@@ -80,7 +80,7 @@ All user visible changes to this project will be documented in this file. This p
 ### Security updated
 
 - [Alpine Linux] 3.17.1: <https://github.com/docker-library/official-images/commit/0fea6bf535f1a863460c1d8c2c381e1e548fd220>
-- [Debian] "bullseye" 20221219: <https://github.com/docker-library/official-images/commit/bb9ab8416571d3ace2737dc3f502a1c26d76e63e>
+- [Debian Linux] "bullseye" 20221219: <https://github.com/docker-library/official-images/commit/bb9ab8416571d3ace2737dc3f502a1c26d76e63e>
 
 
 
@@ -96,7 +96,7 @@ All user visible changes to this project will be documented in this file. This p
 
 ### Security updated
 
-- [Debian] "bullseye" 20221114: <https://github.com/docker-library/official-images/commit/629455d056a9b046c12d4fa65a1006d4b94b5fa5>
+- [Debian Linux] "bullseye" 20221114: <https://github.com/docker-library/official-images/commit/629455d056a9b046c12d4fa65a1006d4b94b5fa5>
 
 
 
@@ -108,7 +108,7 @@ All user visible changes to this project will be documented in this file. This p
 
 ### Fixed
 
-- `syslogd` not running in [Debian]. ([instrumentisto/opendkim-docker-image#6])
+- `syslogd` not running in [Debian Linux]. ([instrumentisto/opendkim-docker-image#6])
 
 [instrumentisto/opendkim-docker-image#6]: https://github.com/instrumentisto/opendkim-docker-image/issues/6
 
@@ -138,7 +138,7 @@ All user visible changes to this project will be documented in this file. This p
 
 ### Security updated
 
-- [Debian] "bullseye" 20220822: <https://github.com/docker-library/official-images/commit/318425555992e2bee72ecb67743ad492f38b71bc>
+- [Debian Linux] "bullseye" 20220822: <https://github.com/docker-library/official-images/commit/318425555992e2bee72ecb67743ad492f38b71bc>
 
 
 
@@ -151,7 +151,7 @@ All user visible changes to this project will be documented in this file. This p
 ### Security updated
 
 - [Alpine Linux] 3.16.2: <https://github.com/docker-library/official-images/commit/00214788d0150e2bcf2b2f51f786f92addef2478>
-- [Debian] "bullseye" 20220801: <https://github.com/docker-library/official-images/commit/ce10f6b60289c0c0b5de6f785528b8725f225a58>
+- [Debian Linux] "bullseye" 20220801: <https://github.com/docker-library/official-images/commit/ce10f6b60289c0c0b5de6f785528b8725f225a58>
 
 
 
@@ -191,7 +191,7 @@ All user visible changes to this project will be documented in this file. This p
 
 ### Security updated
 
-- [Debian] "bullseye" 20220622: <https://github.com/docker-library/official-images/commit/979b8e278e5d921f1bfddf07d1ab56ab6bb9c3f9>
+- [Debian Linux] "bullseye" 20220622: <https://github.com/docker-library/official-images/commit/979b8e278e5d921f1bfddf07d1ab56ab6bb9c3f9>
 
 
 
@@ -207,7 +207,7 @@ All user visible changes to this project will be documented in this file. This p
 
 ### Security updated
 
-- [Debian] "bullseye" 20220527: <https://github.com/docker-library/official-images/commit/e799b2e1ebb7679259c158f881b8cfa59264afd7>
+- [Debian Linux] "bullseye" 20220527: <https://github.com/docker-library/official-images/commit/e799b2e1ebb7679259c158f881b8cfa59264afd7>
 
 
 
@@ -223,7 +223,7 @@ All user visible changes to this project will be documented in this file. This p
 
 ### Security updated
 
-- [Debian] "bullseye" 20220509: <https://github.com/docker-library/official-images/commit/5e2abb3fc26aa1e16e7e3516580621bef93a64e2>
+- [Debian Linux] "bullseye" 20220509: <https://github.com/docker-library/official-images/commit/5e2abb3fc26aa1e16e7e3516580621bef93a64e2>
 
 
 
@@ -272,7 +272,7 @@ All user visible changes to this project will be documented in this file. This p
 ### Security updated
 
 - [Alpine Linux] 3.15.1: <https://github.com/docker-library/official-images/commit/a17a3d23dd04c3de3c43bcc27885638b8f389390>
-- [Debian] "bullseye" 20220316: <https://github.com/docker-library/official-images/commit/1e1bb99db26edc6b8605d83eefc22e1288203a20>
+- [Debian Linux] "bullseye" 20220316: <https://github.com/docker-library/official-images/commit/1e1bb99db26edc6b8605d83eefc22e1288203a20>
 
 
 
@@ -344,7 +344,7 @@ All user visible changes to this project will be documented in this file. This p
 
 ### Upgraded
 
-- [Debian] "bullseye": <https://www.debian.org/releases/bullseye>
+- [Debian Linux] "bullseye": <https://www.debian.org/releases/bullseye>
 
 
 
@@ -431,7 +431,7 @@ All user visible changes to this project will be documented in this file. This p
 
 - [s6-overlay] 2.2.0.3: <https://github.com/just-containers/s6-overlay/releases/tag/v2.2.0.3>
 - [Alpine Linux] 3.13: <https://alpinelinux.org/posts/Alpine-3.13.0-released.html>
-- [Debian] "buster": <https://www.debian.org/releases/buster>
+- [Debian Linux] "buster": <https://www.debian.org/releases/buster>
 
 
 
@@ -446,13 +446,13 @@ All user visible changes to this project will be documented in this file. This p
 - [OpenDMARC] 1.3.2: <https://github.com/trusteddomainproject/OpenDMARC/blob/rel-opendmarc-1-3-2/RELEASE_NOTES#L6>
 - [s6-overlay] 2.0.0.1: <https://github.com/just-containers/s6-overlay/releases/tag/v2.0.0.1>
 - [Alpine Linux] 3.12: <https://alpinelinux.org/posts/Alpine-3.12.0-released.html>
-- [Debian] "stretch": <https://www.debian.org/releases/stretch>
+- [Debian Linux] "stretch": <https://www.debian.org/releases/stretch>
 
 
 
 
 [Alpine Linux]: https://www.alpinelinux.org
-[Debian]: https://www.debian.org
+[Debian Linux]: https://www.debian.org
 [OpenDMARC]: https://github.com/trusteddomainproject/OpenDMARC
 [s6-overlay]: https://github.com/just-containers/s6-overlay
 [Semantic Versioning 2.0.0]: https://semver.org
