@@ -13,7 +13,7 @@ FROM alpine:3.17
 FROM debian:bullseye-slim
 <? } ?>
 
-ARG s6_overlay_ver=3.1.4.2
+ARG s6_overlay_ver=3.1.5.0
 
 
 # Build and install OpenDMARC
