@@ -10,7 +10,7 @@ $isAlpineImage = $var['dockerfile'] === 'alpine';
 FROM alpine:3.18
 <? } else { ?>
 # https://hub.docker.com/_/debian
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 <? } ?>
 
 ARG s6_overlay_ver=3.1.5.0
@@ -144,11 +144,6 @@ RUN apt-get update \
          https://github.com/just-containers/s6-overlay/releases/download/v${s6_overlay_ver}/s6-overlay-x86_64.tar.xz \
  && tar -xf /tmp/s6-overlay-noarch.tar.xz -C / \
  && tar -xf /tmp/s6-overlay-bin.tar.xz -C / \
-<? if (!$isAlpineImage) { ?>
-    \
- # Fix syslogd path
- && ln -s /usr/sbin/syslogd /sbin/syslogd \
-<? } ?>
     \
  # Cleanup unnecessary stuff
 <? if ($isAlpineImage) { ?>

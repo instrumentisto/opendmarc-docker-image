@@ -6,6 +6,18 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
+## [1.4.2-r25] · 2023-06-13
+[1.4.2-r25]: /../../tree/1.4.2-r25
+
+[Diff](/../../compare/1.4.2-r24...1.4.2-r25)
+
+### Upgraded
+
+- [Debian Linux] "bookworm": <https://www.debian.org/releases/bookworm>
+
+
+
+
 ## [1.4.2-r24] · 2023-05-10
 [1.4.2-r24]: /../../tree/1.4.2-r24
 
