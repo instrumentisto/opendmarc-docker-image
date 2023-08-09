@@ -6,6 +6,19 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
+## [1.4.2-r27] · 2023-08-09
+[1.4.2-r27]: /../../tree/1.4.2-r27
+
+[Diff](/../../compare/1.4.2-r26...1.4.2-r27)
+
+### Security updated
+
+- [Alpine Linux] 3.18.3: <https://github.com/docker-library/official-images/commit/3cd1b36bebfa5684e9c1ab89d5673b32453a05d9>
+- [Debian Linux] "bookworm" 20230725: <https://github.com/docker-library/official-images/commit/c4720be18315c939088c4b57472955cdc4d08a4a>
+
+
+
+
 ## [1.4.2-r26] · 2023-06-15
 [1.4.2-r26]: /../../tree/1.4.2-r26
 
