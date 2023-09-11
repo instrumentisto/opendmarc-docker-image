@@ -6,14 +6,14 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
-## [1.4.2-r27] · 2023-08-??
+## [1.4.2-r27] · 2023-09-??
 [1.4.2-r27]: /../../tree/1.4.2-r27
 
 [Diff](/../../compare/1.4.2-r27...)
 
 ### Security updated
 
-- [Debian Linux] "bookworm" 20230814: <https://github.com/docker-library/official-images/commit/41698123990194f4e14436e3caff748bf16455a9>
+- [Debian Linux] "bookworm" 20230904: <https://github.com/docker-library/official-images/commit/33b80d7fe4aeab3a9ebf93abe8eb68eb8df29a7b>
 
 
 
