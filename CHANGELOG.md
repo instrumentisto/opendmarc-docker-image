@@ -6,13 +6,14 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
-## [1.4.2-r27] · 2023-09-??
-[1.4.2-r27]: /../../tree/1.4.2-r27
+## [1.4.2-r28] · 2023-10-04
+[1.4.2-r28]: /../../tree/1.4.2-r28
 
-[Diff](/../../compare/1.4.2-r27...)
+[Diff](/../../compare/1.4.2-r27...1.4.2-r28)
 
 ### Security updated
 
+- [Alpine Linux] 3.18.4: <https://github.com/docker-library/official-images/commit/2f22914dcf488bd066771452d2c694ad4f7e88c4>
 - [Debian Linux] "bookworm" 20230919: <https://github.com/docker-library/official-images/commit/8b469263a1fab3a17b9f520bcf8ef53f3c828e27>
 
 
