@@ -6,6 +6,18 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
+## [1.4.2-r28] · 2023-??-??
+[1.4.2-r28]: /../../tree/1.4.2-r28
+
+[Diff](/../../compare/1.4.2-r28...)
+
+### Security updated
+
+- [Debian Linux] "bookworm" 20231009: <https://github.com/docker-library/official-images/commit/ef808eeaa23c28fd72cdcc5374affcc71894bbcc>
+
+
+
+
 ## [1.4.2-r28] · 2023-10-04
 [1.4.2-r28]: /../../tree/1.4.2-r28
 
