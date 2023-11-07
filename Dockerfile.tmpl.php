@@ -7,13 +7,13 @@ $isAlpineImage = $var['dockerfile'] === 'alpine';
 
 <? if ($isAlpineImage) { ?>
 # https://hub.docker.com/_/alpine
-FROM alpine:3.18.4
+FROM alpine:3.18
 <? } else { ?>
 # https://hub.docker.com/_/debian
 FROM debian:bookworm-slim
 <? } ?>
 
-ARG s6_overlay_ver=3.1.5.0
+ARG s6_overlay_ver=3.1.6.0
 
 
 # Build and install OpenDMARC
