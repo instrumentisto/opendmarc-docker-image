@@ -4,7 +4,7 @@
 # https://hub.docker.com/_/debian
 FROM debian:bookworm-slim
 
-ARG s6_overlay_ver=3.1.6.0
+ARG s6_overlay_ver=3.1.6.1
 
 
 # Build and install OpenDMARC
