@@ -4,7 +4,7 @@
 # https://hub.docker.com/_/alpine
 FROM alpine:3.18
 
-ARG s6_overlay_ver=3.1.6.1
+ARG s6_overlay_ver=3.1.6.2
 
 
 # Build and install OpenDMARC
