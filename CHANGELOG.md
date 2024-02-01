@@ -6,6 +6,18 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
+## [1.4.2-r34] · 2024-??-?? (unreleased)
+[1.4.2-r34]: /../../tree/1.4.2-r34
+
+[Diff](/../../compare/1.4.2-r34...)
+
+### Security updated
+
+- [Debian Linux] "bookworm" 20240130 (12.4): <https://github.com/docker-library/official-images/commit/60fc515bbe004eb68c3ce77c07ab8e6283fdfb4b>
+
+
+
+
 ## [1.4.2-r34] · 2024-01-29
 [1.4.2-r34]: /../../tree/1.4.2-r34
 
