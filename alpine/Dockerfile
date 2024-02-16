@@ -41,6 +41,7 @@ RUN apk update \
  && ./configure \
         --prefix=/usr \
         --sysconfdir=/etc/opendmarc \
+        --with-spf \
         # No documentation included to keep image size smaller
         --docdir=/tmp/opendmarc/doc \
         --infodir=/tmp/opendmarc/info \
