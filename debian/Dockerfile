@@ -17,7 +17,7 @@ RUN apt-get update \
     \
  # Install OpenDMARC dependencies
  && apt-get install -y --no-install-recommends --no-install-suggests \
-            libmilter1.0.1 \
+            libmilter1.0.1 libspf2-2 \
     \
  # Install tools for building
  && toolDeps=" \
@@ -28,7 +28,7 @@ RUN apt-get update \
     \
  # Install OpenDMARC build dependencies
  && buildDeps=" \
-        libmilter-dev \
+        libmilter-dev libspf2-dev \
     " \
  && apt-get install -y --no-install-recommends --no-install-suggests \
             $buildDeps \
@@ -45,6 +45,8 @@ RUN apt-get update \
         --prefix=/usr \
         --sysconfdir=/etc/opendmarc \
         --with-spf \
+        --with-spf2-lib=/usr/lib \
+        --with-spf2-include=/usr/include/spf2 \
         # No documentation included to keep image size smaller
         --docdir=/tmp/opendmarc/doc \
         --infodir=/tmp/opendmarc/info \

@@ -6,14 +6,20 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
-## [1.4.2-r34] · 2024-??-?? (unreleased)
-[1.4.2-r34]: /../../tree/1.4.2-r34
+## [1.4.2-r35] · 2024-02-22
+[1.4.2-r35]: /../../tree/1.4.2-r35
 
-[Diff](/../../compare/1.4.2-r34...)
+[Diff](/../../compare/1.4.2-r34...1.4.2-r35)
+
+### Added
+
+- [SPF] support via [`libspf2`]. ([#8])
 
 ### Security updated
 
 - [Debian Linux] "bookworm" 20240211 (12.5): <https://github.com/docker-library/official-images/commit/147fd00d93bf7eac5c870d0df155a810d3050b5b>
+
+[#8]: /../../pull/8
 
 
 
@@ -634,8 +640,10 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
+[`libspf2`]: https://www.libspf2.org
 [Alpine Linux]: https://www.alpinelinux.org
 [Debian Linux]: https://www.debian.org
 [OpenDMARC]: https://github.com/trusteddomainproject/OpenDMARC
 [s6-overlay]: https://github.com/just-containers/s6-overlay
 [Semantic Versioning 2.0.0]: https://semver.org
+[SPF]: https://en.wikipedia.org/wiki/Sender_Policy_Framework

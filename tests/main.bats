@@ -29,6 +29,18 @@
   [ "$actual" == "$expected" ]
 }
 
+@test "opendmarc: with SPF" {
+  run docker run --rm --pull never --entrypoint sh $IMAGE -c \
+    "opendmarc -V | grep -w 'WITH_SPF'"
+  [ "$status" -eq 0 ]
+}
+
+@test "opendmarc: with SPF2" {
+  run docker run --rm --pull never --entrypoint sh $IMAGE -c \
+    "opendmarc -V | grep -w 'WITH_SPF2'"
+  [ "$status" -eq 0 ]
+}
+
 
 @test "drop-in: opendmarc listens on 8890 port" {
   run docker rm -f test-opendmarc
