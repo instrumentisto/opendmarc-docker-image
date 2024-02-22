@@ -16,7 +16,7 @@ RUN apk update \
     \
  # Install OpenDMARC dependencies
  && apk add --no-cache \
-        libmilter \
+        libmilter libspf2 \
     \
  # Install tools for building
  && apk add --no-cache --virtual .tool-deps \
@@ -24,7 +24,7 @@ RUN apk update \
     \
  # Install OpenDMARC build dependencies
  && apk add --no-cache --virtual .build-deps \
-        libmilter-dev \
+        libmilter-dev libspf2-dev \
     \
  # Download and prepare OpenDMARC sources
  && curl -fL -o /tmp/opendmarc.tar.gz \
@@ -41,6 +41,9 @@ RUN apk update \
  && ./configure \
         --prefix=/usr \
         --sysconfdir=/etc/opendmarc \
+        --with-spf \
+        --with-spf2-lib=/usr/lib \
+        --with-spf2-include=/usr/include/spf2 \
         # No documentation included to keep image size smaller
         --docdir=/tmp/opendmarc/doc \
         --infodir=/tmp/opendmarc/info \
