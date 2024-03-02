@@ -77,7 +77,26 @@ To see default OpenDMARC configuration of this Docker image just run:
 docker run --rm instrumentisto/opendmarc cat /etc/opendmarc/opendmarc.conf
 ```
 
+#### Sending reports
 
+The Docker images come with msmtp MTA preinstalled which you can use to send reports when requested via the `ruf` tag inside a DMARC record.
+For this to happen, in `opendmarc.conf` set `FailureReports true` and `FailureReportsSentBy` to your (probably noreply) sender address.
+Then, map an `/etc/msmtprc` configuration file that looks like this:
+
+```
+defaults
+logfile -
+
+account default
+host <SMTP host>
+port <SMTP port>
+from <sender address>
+```
+
+Apart from substituting your MTA hostname/port and your sender address (again), consider adding TLS and authentication if you're
+touching untrusted network. See the msmtp man page for details.
+
+Make sure to avoid mail loops, which can happen if processing your report mails violate your own DMARC rules, causing more reports.
 
 
 ## Important tips

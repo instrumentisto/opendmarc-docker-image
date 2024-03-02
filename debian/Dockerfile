@@ -13,6 +13,7 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends --no-install-suggests \
             inetutils-syslogd \
             ca-certificates \
+            msmtp-mta \
  && update-ca-certificates \
     \
  # Install OpenDMARC dependencies

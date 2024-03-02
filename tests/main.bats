@@ -72,3 +72,9 @@
     '/sbin/syslogd --help'
   [ "$status" -eq 0 ]
 }
+
+@test "sendmail: exists" {
+  run docker run --rm --pull never --entrypoint sh $IMAGE -c \
+    "test -f /usr/sbin/sendmail"
+  [ "$status" -eq 0 ]
+}

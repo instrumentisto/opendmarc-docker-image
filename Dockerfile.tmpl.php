@@ -22,12 +22,14 @@ RUN apk update \
  && apk upgrade \
  && apk add --no-cache \
         ca-certificates \
+        msmtp \
 <? } else { ?>
 RUN apt-get update \
  && apt-get upgrade -y \
  && apt-get install -y --no-install-recommends --no-install-suggests \
             inetutils-syslogd \
             ca-certificates \
+            msmtp-mta \
 <? } ?>
  && update-ca-certificates \
     \
