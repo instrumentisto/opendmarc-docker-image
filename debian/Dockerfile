@@ -18,6 +18,7 @@ RUN apt-get update \
  # Install OpenDMARC dependencies
  && apt-get install -y --no-install-recommends --no-install-suggests \
             libmilter1.0.1 libspf2-2 \
+            msmtp-mta \
     \
  # Install tools for building
  && toolDeps=" \

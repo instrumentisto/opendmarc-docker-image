@@ -6,14 +6,21 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
-## [1.4.2-r35] · 2024-??-?? (unreleased)
-[1.4.2-r35]: /../../tree/1.4.2-r35
+## [1.4.2-r36] · 2024-03-12
+[1.4.2-r36]: /../../tree/1.4.2-r36
 
-[Diff](/../../compare/1.4.2-r35...)
+[Diff](/../../compare/1.4.2-r35...1.4.2-r36)
+
+### Added
+
+- Sending reports support via [`msmtp`]. ([#10], [#9])
 
 ### Security updated
 
 - [Debian Linux] "bookworm" 20240311 (12.5): <https://github.com/docker-library/official-images/commit/c67fd26a4cbfe0f59d8013bc1e87a84c5621faf0>
+
+[#9]: /../../issues/9
+[#10]: /../../pull/10
 
 
 
@@ -653,6 +660,7 @@ All user visible changes to this project will be documented in this file. This p
 
 
 [`libspf2`]: https://www.libspf2.org
+[`msmtp`]: https://marlam.de/msmtp
 [Alpine Linux]: https://www.alpinelinux.org
 [Debian Linux]: https://www.debian.org
 [OpenDMARC]: https://github.com/trusteddomainproject/OpenDMARC

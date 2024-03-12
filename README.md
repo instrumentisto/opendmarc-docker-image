@@ -77,6 +77,25 @@ To see default OpenDMARC configuration of this Docker image just run:
 docker run --rm instrumentisto/opendmarc cat /etc/opendmarc/opendmarc.conf
 ```
 
+#### Sending reports
+
+This image comes with [`msmtp` MTA][30] preinstalled, which can be used to send reports when requested via the [`ruf` tag inside a DMARC record][32].
+
+For this to happen, in `opendmarc.conf` set `FailureReports true` and `FailureReportsSentBy` to your (probably `noreply`) sender address. Then, put an `/etc/msmtprc` configuration file that looks like this:
+```
+defaults
+logfile -
+
+account default
+host <SMTP host>
+port <SMTP port>
+from <sender address>
+```
+
+Apart from substituting your MTA hostname/port and your sender address (again), consider adding TLS and authentication if you're touching untrusted network. See the [`msmtp` man page][31] for details.
+
+Make sure to avoid mail loops, which can happen if processing a report mails violates its own [DMARC][11] rules, causing more reports.
+
 
 
 
@@ -168,6 +187,9 @@ If you have any problems with or questions about this image, please contact us t
 [20]: http://skarnet.org/software/s6/overview.html
 [21]: https://github.com/just-containers/s6-overlay
 [22]: https://github.com/just-containers/s6-overlay#usage
+[30]: https://marlam.de/msmtp
+[31]: https://marlam.de/msmtp/msmtp.html
+[32]: https://dmarc.org/overview#odd_row
 [90]: https://github.com/instrumentisto/opendmarc-docker-image
 [91]: https://github.com/instrumentisto/opendmarc-docker-image/blob/main/LICENSE.md
 [92]: https://sourceforge.net/p/opendmarc/code/ci/master/tree/LICENSE

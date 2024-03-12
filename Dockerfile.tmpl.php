@@ -35,9 +35,11 @@ RUN apt-get update \
 <? if ($isAlpineImage) { ?>
  && apk add --no-cache \
         libmilter libspf2 \
+        msmtp \
 <? } else { ?>
  && apt-get install -y --no-install-recommends --no-install-suggests \
             libmilter1.0.1 libspf2-2 \
+            msmtp-mta \
 <? } ?>
     \
  # Install tools for building

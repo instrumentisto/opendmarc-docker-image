@@ -17,6 +17,7 @@ RUN apk update \
  # Install OpenDMARC dependencies
  && apk add --no-cache \
         libmilter libspf2 \
+        msmtp \
     \
  # Install tools for building
  && apk add --no-cache --virtual .tool-deps \
