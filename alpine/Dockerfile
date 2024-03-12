@@ -12,12 +12,12 @@ RUN apk update \
  && apk upgrade \
  && apk add --no-cache \
         ca-certificates \
-        msmtp \
  && update-ca-certificates \
     \
  # Install OpenDMARC dependencies
  && apk add --no-cache \
         libmilter libspf2 \
+        msmtp \
     \
  # Install tools for building
  && apk add --no-cache --virtual .tool-deps \

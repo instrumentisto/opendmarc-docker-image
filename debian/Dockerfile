@@ -13,12 +13,12 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends --no-install-suggests \
             inetutils-syslogd \
             ca-certificates \
-            msmtp-mta \
  && update-ca-certificates \
     \
  # Install OpenDMARC dependencies
  && apt-get install -y --no-install-recommends --no-install-suggests \
             libmilter1.0.1 libspf2-2 \
+            msmtp-mta \
     \
  # Install tools for building
  && toolDeps=" \
