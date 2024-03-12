@@ -73,8 +73,15 @@
   [ "$status" -eq 0 ]
 }
 
-@test "sendmail: exists" {
+
+@test "sendmail: is present" {
   run docker run --rm --pull never --entrypoint sh $IMAGE -c \
-    "test -f /usr/sbin/sendmail"
+    'which sendmail'
+  [ "$status" -eq 0 ]
+}
+
+@test "sendmail: runs ok" {
+  run docker run --rm --pull never --entrypoint sh $IMAGE -c \
+    'sendmail --help'
   [ "$status" -eq 0 ]
 }
