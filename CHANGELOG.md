@@ -6,10 +6,14 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
-## [1.4.2-r36] · 2024-??-?? (unreleased)
-[1.4.2-r36]: /../../tree/1.4.2-r36
+## [1.4.2-r37] · 2024-05-24
+[1.4.2-r37]: /../../tree/1.4.2-r37
 
-[Diff](/../../compare/1.4.2-r36...)
+[Diff](/../../compare/1.4.2-r36...1.4.2-r37)
+
+### Upgraded
+
+- [Alpine Linux] 3.20: <https://alpinelinux.org/posts/Alpine-3.20.0-released.html>
 
 ### Security updated
 
