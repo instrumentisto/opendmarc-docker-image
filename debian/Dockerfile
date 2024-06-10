@@ -4,7 +4,7 @@
 # https://hub.docker.com/_/debian
 FROM debian:bookworm-slim
 
-ARG s6_overlay_ver=3.1.6.2
+ARG s6_overlay_ver=3.2.0.0
 
 
 # Build and install OpenDMARC
@@ -102,7 +102,8 @@ RUN apt-get update \
 
 ENV S6_KEEP_ENV=1 \
     S6_BEHAVIOUR_IF_STAGE2_FAILS=2 \
-    S6_CMD_WAIT_FOR_SERVICES=1
+    S6_CMD_WAIT_FOR_SERVICES=1 \
+    S6_CMD_WAIT_FOR_SERVICES_MAXTIME=5000
 
 
 COPY rootfs /
