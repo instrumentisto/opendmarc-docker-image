@@ -6,6 +6,18 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
+## [1.4.2-r38] · 2024-??-?? (unreleased)
+[1.4.2-r38]: /../../tree/1.4.2-r38
+
+[Diff](/../../compare/1.4.2-r38...)
+
+### Security updated
+
+- [Debian Linux] "bookworm" 20240612 (12.5): <https://github.com/docker-library/official-images/commit/5891883bb94aefbf0ec4fa1fea1bc4679d164657>
+
+
+
+
 ## [1.4.2-r38] · 2024-06-10
 [1.4.2-r38]: /../../tree/1.4.2-r38
 
