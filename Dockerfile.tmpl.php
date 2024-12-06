@@ -7,7 +7,7 @@ $isAlpineImage = $var['dockerfile'] === 'alpine';
 
 <? if ($isAlpineImage) { ?>
 # https://hub.docker.com/_/alpine
-FROM alpine:3.20
+FROM alpine:3.21
 <? } else { ?>
 # https://hub.docker.com/_/debian
 FROM debian:bookworm-slim
@@ -79,7 +79,7 @@ RUN apt-get update \
 <? } ?>
     \
  # Build OpenDMARC from sources
- && autoreconf -v -i \
+ && autoreconf -ivf \
  && ./configure \
         --prefix=/usr \
         --sysconfdir=/etc/opendmarc \

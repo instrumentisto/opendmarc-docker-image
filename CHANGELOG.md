@@ -6,10 +6,14 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
-## [main] · (unreleased)
-[main]: /../../tree/main
+## [1.4.2-r43] · 2024-12-06
+[1.4.2-r43]: /../../tree/1.4.2-r43
 
-[Diff](/../../compare/1.4.2-r42...main)
+[Diff](/../../compare/1.4.2-r42...1.4.2-r43)
+
+### Upgraded
+
+- [Alpine Linux] 3.21: <https://www.alpinelinux.org/posts/Alpine-3.21.0-released.html>
 
 ### Security updated
 

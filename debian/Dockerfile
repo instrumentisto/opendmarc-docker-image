@@ -41,7 +41,7 @@ RUN apt-get update \
  && cd /tmp/OpenDMARC-* \
     \
  # Build OpenDMARC from sources
- && autoreconf -v -i \
+ && autoreconf -ivf \
  && ./configure \
         --prefix=/usr \
         --sysconfdir=/etc/opendmarc \
