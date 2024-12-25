@@ -6,6 +6,18 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
+## [main] · unreleased
+[main]: /../../tree/main
+
+[Diff](/../../compare/1.4.2-r43...main)
+
+### Security updated
+
+- [Debian Linux] "bookworm" 20241223 (12.8): <https://github.com/docker-library/official-images/commit/b6ea0fc48d92a7f6ef631667e82600666be53181>
+
+
+
+
 ## [1.4.2-r43] · 2024-12-06
 [1.4.2-r43]: /../../tree/1.4.2-r43
 
