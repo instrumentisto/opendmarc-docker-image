@@ -6,6 +6,18 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
+## [1.4.2-r45] · 2025-01-09
+[1.4.2-r45]: /../../tree/1.4.2-r45
+
+[Diff](/../../compare/1.4.2-r44...1.4.2-r45)
+
+### Security updated
+
+- [Alpine Linux] 3.21.2: <https://github.com/docker-library/official-images/commit/824cefde693b820f783266fda449588ca583a1b0>
+
+
+
+
 ## [1.4.2-r44] · 2025-01-08
 [1.4.2-r44]: /../../tree/1.4.2-r44
 
