@@ -2,7 +2,7 @@ OpenDMARC Docker image
 ======================
 
 [![Release](https://img.shields.io/github/v/release/instrumentisto/opendmarc-docker-image "Release")](https://github.com/instrumentisto/opendmarc-docker-image/releases)
-[![CI](https://github.com/instrumentisto/opendmarc-docker-image/workflows/CI/badge.svg?branch=main "CI")](https://github.com/instrumentisto/opendmarc-docker-image/actions?query=workflow%3ACI+branch%3Amain)
+[![CI](https://github.com/instrumentisto/opendmarc-docker-image/actions/workflows/ci.yml/badge.svg?branch=main "CI")](https://github.com/instrumentisto/opendmarc-docker-image/actions?query=workflow%3ACI+branch%3Amain)
 [![Docker Hub](https://img.shields.io/docker/pulls/instrumentisto/opendmarc?label=Docker%20Hub%20pulls "Docker Hub pulls")](https://hub.docker.com/r/instrumentisto/opendmarc)
 [![Uses](https://img.shields.io/badge/uses-s6--overlay-blue.svg "Uses s6-overlay")](https://github.com/just-containers/s6-overlay)
 
@@ -17,8 +17,8 @@ OpenDMARC Docker image
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.4.2-r45`, `1.4.2`, `1.4`, `1`, `latest`][101]
-- [`1.4.2-r45-alpine`, `1.4.2-alpine`, `1.4-alpine`, `1-alpine`, `alpine`][102]
+- [`1.4.2-r46`, `1.4.2`, `1.4`, `1`, `latest`][101]
+- [`1.4.2-r46-alpine`, `1.4.2-alpine`, `1.4-alpine`, `1-alpine`, `alpine`][102]
 
 
 
