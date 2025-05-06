@@ -13,7 +13,7 @@ FROM alpine:3.21
 FROM debian:bookworm-slim
 <? } ?>
 
-ARG s6_overlay_ver=3.2.0.2
+ARG s6_overlay_ver=3.2.0.3
 
 
 # Build and install OpenDMARC
