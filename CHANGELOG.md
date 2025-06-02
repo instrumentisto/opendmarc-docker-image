@@ -6,9 +6,14 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
-## main
+## [1.4.2-r49] · 2025-06-02
+[1.4.2-r49]: /../../tree/1.4.2-r49
 
-[Diff](/../../compare/1.4.2-r48...main)
+[Diff](/../../compare/1.4.2-r48...1.4.2-r49)
+
+### Upgraded
+
+- [Alpine Linux] 3.22: <https://www.alpinelinux.org/posts/Alpine-3.22.0-released.html>
 
 ### Security updated
 
