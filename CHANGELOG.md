@@ -6,12 +6,14 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
-## main
+## [1.4.2-r50] · 2025-07-16
+[1.4.2-r50]: /../../tree/1.4.2-r50
 
-[Diff](/../../compare/1.4.2-r49...main)
+[Diff](/../../compare/1.4.2-r49...1.4.2-r50)
 
 ### Security updated
 
+- [Alpine Linux] 3.22.1: <https://github.com/docker-library/official-images/commit/9411795f2a8ba13baa3be3ca4a7827170a445695>
 - [Debian Linux] "bookworm" 20250630 (12.11): <https://github.com/docker-library/official-images/commit/2568150630c10253d352ff0695b0dc73717230c1>
 
 
