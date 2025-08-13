@@ -10,7 +10,7 @@ $isAlpineImage = $var['dockerfile'] === 'alpine';
 FROM alpine:3.22
 <? } else { ?>
 # https://hub.docker.com/_/debian
-FROM debian:bookworm-slim
+FROM debian:trixie-slim
 <? } ?>
 
 ARG s6_overlay_ver=3.2.1.0
@@ -38,7 +38,7 @@ RUN apt-get update \
         msmtp \
 <? } else { ?>
  && apt-get install -y --no-install-recommends --no-install-suggests \
-            libmilter1.0.1 libspf2-2 \
+            libmilter1.0.1 libspf2-2t64 \
             msmtp-mta \
 <? } ?>
     \

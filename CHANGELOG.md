@@ -6,13 +6,14 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
-## main
+## [1.4.2-r51] · 2025-08-13
+[1.4.2-r51]: /../../tree/1.4.2-r51
 
-[Diff](/../../compare/1.4.2-r50...main)
+[Diff](/../../compare/1.4.2-r50...1.4.2-r51)
 
-### Security updated
+### Upgraded
 
-- [Debian Linux] "bookworm" 20250811 (12.11): <https://github.com/docker-library/official-images/commit/9104ff62fc7a735b9646379f7b3246ab471fbae4>
+- [Debian Linux] "trixie": <https://www.debian.org/releases/trixie>
 
 
 
