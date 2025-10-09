@@ -6,12 +6,14 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
-## main
+## [1.4.2-r52] · 2025-10-09
+[1.4.2-r52]: /../../tree/1.4.2-r52
 
-[Diff](/../../compare/1.4.2-r51...main)
+[Diff](/../../compare/1.4.2-r51...1.4.2-r52)
 
 ### Security updated
 
+- [Alpine Linux] 3.22.2: <https://github.com/docker-library/official-images/commit/fdacb511822ac9045ec7ec066c1228f94291139f>
 - [Debian Linux] "trixie" 20250929 (13.1): <https://github.com/docker-library/official-images/commit/bb9759b29477674ff2e13518ec2de144fb863b35>
 
 
