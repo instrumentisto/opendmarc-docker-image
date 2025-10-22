@@ -6,6 +6,17 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
+## main
+
+[Diff](/../../compare/1.4.2-r52...main)
+
+### Security updated
+
+- [Debian Linux] "trixie" 20251020 (13.1): <https://github.com/docker-library/official-images/commit/7d7121f027cea92f35edf151aef7d1175b9e1464>
+
+
+
+
 ## [1.4.2-r52] · 2025-10-09
 [1.4.2-r52]: /../../tree/1.4.2-r52
 
