@@ -6,9 +6,14 @@ All user visible changes to this project will be documented in this file. This p
 
 
 
-## main
+## [1.4.2-r53] · 2025-12-04
+[1.4.2-r53]: /../../tree/1.4.2-r53
 
-[Diff](/../../compare/1.4.2-r52...main)
+[Diff](/../../compare/1.4.2-r52...1.4.2-r53)
+
+### Upgraded
+
+- [Alpine Linux] 3.23: <https://www.alpinelinux.org/posts/Alpine-3.23.0-released.html>
 
 ### Security updated
 
