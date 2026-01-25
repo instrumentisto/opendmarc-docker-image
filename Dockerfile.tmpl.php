@@ -13,7 +13,7 @@ FROM alpine:3.23
 FROM debian:trixie-slim
 <? } ?>
 
-ARG s6_overlay_ver=3.2.1.0
+ARG s6_overlay_ver=3.2.2.0
 
 
 # Build and install OpenDMARC
