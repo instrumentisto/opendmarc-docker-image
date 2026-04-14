@@ -15,6 +15,13 @@ OpenDMARC Docker image
 
 
 
+## Status
+
+__PROJECT IS CLOSED AND ARCHIVED. NO MAINTAINING WILL BE CONTINUED.__
+
+
+
+
 ## Supported tags and respective `Dockerfile` links
 
 - [`1.4.2-r56`, `1.4.2`, `1.4`, `1`, `latest`][101]
